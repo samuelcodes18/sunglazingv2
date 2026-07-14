@@ -8,7 +8,7 @@ The project is a complete redesign and modernization of the company's legacy web
 
 ## 🌐 Live Website
 
-https://YOUR-VERCEL-DOMAIN.vercel.app
+[https://YOUR-VERCEL-DOMAIN.vercel.app](https://sunglazingv2.vercel.app/)
 
 ---
 
