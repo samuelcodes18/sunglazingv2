@@ -1,36 +1,222 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sun Glazing Website (2026 Redesign)
 
-## Getting Started
+A modern, responsive, enterprise-grade corporate website built for **Sun Glazing & Fabrication Pvt. Ltd.**, a leading facade engineering and curtain wall systems company.
 
-First, run the development server:
+The project is a complete redesign and modernization of the company's legacy website, focusing on improved user experience, premium visual design, performance, and scalability.
+
+---
+
+## 🌐 Live Website
+
+https://YOUR-VERCEL-DOMAIN.vercel.app
+
+---
+
+## 📖 About The Project
+
+This project modernizes the original Sun Glazing website into a contemporary corporate platform showcasing:
+
+- Company profile and history
+- Services and facade systems
+- Project portfolio
+- Awards and certifications
+- Clients and partnerships
+- Contact and business inquiries
+
+The redesign emphasizes:
+
+- Modern corporate aesthetics
+- Improved information architecture
+- Mobile responsiveness
+- Faster loading times
+- Better SEO
+- Scalable component architecture
+
+---
+
+## ✨ Features
+
+### Homepage
+- Hero image carousel
+- Company statistics section
+- Featured projects showcase
+- Services overview
+- Client logo marquee
+- Call-to-action sections
+
+### About Us
+- Company history
+- Organizational information
+- Mission and vision
+- Leadership overview
+
+### Services
+- Unitized Curtain Wall Systems
+- Semi-Unitized Systems
+- Structural Glazing
+- Glass Elevation Systems
+- Building Elevation Solutions
+
+### Projects
+- Dynamic project showcase
+- Categorized project listings
+- Project galleries
+- Detailed case studies
+
+### Additional Pages
+- Awards & Certifications
+- Facilities
+- Our Clients
+- Contact Page
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+
+### UI Components
+- shadcn/ui
+- Radix UI
+
+### Deployment
+- Vercel
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+## 📁 Project Structure
+
+```text
+app/
+components/
+public/
+lib/
+content/
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+```
+
+### Navigate to project directory
+
+```bash
+cd YOUR_REPOSITORY
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 Build For Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design Philosophy
 
-## Deploy on Vercel
+The visual language of the website is inspired by:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Modern enterprise websites
+- Architectural firms
+- Glass and facade engineering companies
+- Minimal corporate design systems
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The redesign focuses on:
+
+- Clean layouts
+- Large project imagery
+- Strong visual hierarchy
+- Corporate blue accents
+- Accessibility and responsiveness
+
+---
+
+## 📈 Future Enhancements
+
+- CMS integration
+- Project search and filtering
+- Interactive project maps
+- Downloadable brochures
+- Multi-language support
+- Blog and insights section
+- Inquiry management system
+
+---
+
+## 👨‍💻 Development Workflow
+
+```text
+Local Development
+    ↓
+Git Commit
+    ↓
+GitHub Push
+    ↓
+Automatic Vercel Deployment
+```
+
+---
+
+## 🏢 Company
+
+**Sun Glazing & Fabrication Pvt. Ltd.**
+
+Specializing in:
+
+- Curtain Wall Systems
+- Structural Glazing
+- Building Facades
+- Architectural Glass Solutions
+- Turnkey Facade Engineering Projects
+
+---
+
+## 📄 License
+
+This project is proprietary and developed for Sun Glazing & Fabrication Pvt. Ltd.
+
+All rights reserved.
+
+---
+
+## 👤 Author
+
+Developed and maintained by:
+
+**Samuel Jeevan Reddy**
