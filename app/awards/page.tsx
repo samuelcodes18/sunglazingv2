@@ -21,14 +21,14 @@ export default function Awards() {
       
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto mb-20 space-y-6 mt-10">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-          <Award className="w-3.5 h-3.5 text-sky-400" />
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
+          <Award className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>Accreditation & Quality</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-white font-display tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
           Awards & Certifications
         </h1>
-        <p className="text-slate-350 text-xs sm:text-sm max-w-xl mx-auto">
+        <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto">
           Sun Glazing maintains a rigorous focus on quality compliance, structural calculations validation, and site safety management.
         </p>
       </section>
@@ -36,32 +36,32 @@ export default function Awards() {
       {/* Highlights Grid */}
       <section className="mb-24 grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-white/5 space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400">
+        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
+          <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-[#2563EB]">
             <ShieldCheck className="w-5 h-5" />
           </div>
-          <h3 className="text-white text-lg font-bold font-display">System Integrity</h3>
-          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          <h3 className="text-[#0F172A] text-lg font-bold font-display">System Integrity</h3>
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             Our systems conform strictly to European and ASTM standards for curtain wall installations, backed by collaborations with system developers like Reynaers Belgium.
           </p>
         </div>
 
-        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-white/5 space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
+        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
+          <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-500">
             <FileText className="w-5 h-5" />
           </div>
-          <h3 className="text-white text-lg font-bold font-display">Audit & Calculation Certs</h3>
-          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          <h3 className="text-[#0F172A] text-lg font-bold font-display">Audit & Calculation Certs</h3>
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             We provide third-party validated calculations and loading charts for every project in South India, with engineering audit clearance from IIT Chennai.
           </p>
         </div>
 
-        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-white/5 space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
+          <div className="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-500">
             <CheckCircle2 className="w-5 h-5" />
           </div>
-          <h3 className="text-white text-lg font-bold font-display">Safety Accreditations</h3>
-          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          <h3 className="text-[#0F172A] text-lg font-bold font-display">Safety Accreditations</h3>
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             100% adherence to corporate safety codes for high-rise works, crane/hoisting procedures, and panel handling systems.
           </p>
         </div>
@@ -71,17 +71,17 @@ export default function Awards() {
       {/* Visual Wall of Certificates */}
       <section className="mb-10">
         <div className="text-center mb-12 space-y-3">
-          <span className="text-xs uppercase font-bold text-sky-400 tracking-widest">Verification Documents</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-display">Certificates Gallery</h2>
+          <span className="text-xs uppercase font-bold text-[#2563EB] tracking-widest">Verification Documents</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-display">Certificates Gallery</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {awardImages.map((img, idx) => (
             <div 
               key={idx}
-              className="glass-panel rounded-xl overflow-hidden border-white/5 flex flex-col justify-between group hover:border-sky-500/35 transition-all"
+              className="glass-panel rounded-xl overflow-hidden border-[#E2E8F0] flex flex-col justify-between group hover:border-[#2563EB]/30 transition-all"
             >
-              <div className="relative h-64 w-full overflow-hidden bg-slate-900 flex items-center justify-center p-2">
+              <div className="relative h-64 w-full overflow-hidden bg-slate-100 flex items-center justify-center p-2">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img.url}
@@ -89,8 +89,8 @@ export default function Awards() {
                   className="object-contain w-full h-full group-hover:scale-[1.02] transition-transform duration-500 max-h-60"
                 />
               </div>
-              <div className="p-4 border-t border-slate-900 bg-slate-950/40">
-                <span className="text-white text-xs font-bold font-display block leading-snug">
+              <div className="p-4 border-t border-[#E2E8F0] bg-white">
+                <span className="text-[#0F172A] text-xs font-bold font-display block leading-snug">
                   {img.title}
                 </span>
                 <span className="text-[9px] text-slate-500 block uppercase tracking-wider mt-1">

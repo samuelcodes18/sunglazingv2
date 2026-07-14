@@ -24,14 +24,14 @@ export default function Facilities() {
       
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto mb-20 space-y-6 mt-10">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-          <Cpu className="w-3.5 h-3.5 text-sky-400" />
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
+          <Cpu className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>Industrial Capacity</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-white font-display tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
           Manufacturing Facilities
         </h1>
-        <p className="text-slate-350 text-xs sm:text-sm max-w-xl mx-auto">
+        <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto">
           Our specialized plant in Chandenvalle houses heavy-duty CNC machining lines, clean-room silicon curing zones, and automated pre-assembly stations.
         </p>
       </section>
@@ -39,32 +39,32 @@ export default function Facilities() {
       {/* 1. Facility Stats Card */}
       <section className="mb-24 grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-white/5 space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400">
+        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
+          <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-[#2563EB]">
             <Scale className="w-5 h-5" />
           </div>
-          <h3 className="text-white text-lg font-bold font-display">Extrusion Heritage</h3>
-          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          <h3 className="text-[#0F172A] text-lg font-bold font-display">Extrusion Heritage</h3>
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             Our historical roots in profile extrusion enable us to maintain a capacity of 3000 tons/annum, ensuring a steady supply of structural sections.
           </p>
         </div>
 
-        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-white/5 space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
+        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
+          <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-500">
             <Hammer className="w-5 h-5" />
           </div>
-          <h3 className="text-white text-lg font-bold font-display">Turnkey Pre-Assembly</h3>
-          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          <h3 className="text-[#0F172A] text-lg font-bold font-display">Turnkey Pre-Assembly</h3>
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             Off-site modular assembly reduces site workloads by 70%. We deliver pre-glazed, weather-sealed panels directly to the build coordinates.
           </p>
         </div>
 
-        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-white/5 space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+        <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
+          <div className="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-500">
             <ShieldCheck className="w-5 h-5" />
           </div>
-          <h3 className="text-white text-lg font-bold font-display">Testing & QA Rigor</h3>
-          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          <h3 className="text-[#0F172A] text-lg font-bold font-display">Testing & QA Rigor</h3>
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             We partner with the Reynaers Institute, Belgium, to perform air infiltration, water leakage, and structural loading tests on custom facade units.
           </p>
         </div>
@@ -74,9 +74,9 @@ export default function Facilities() {
       {/* 2. Visual Plant Tour Gallery */}
       <section className="mb-10">
         <div className="text-center mb-12 space-y-3">
-          <span className="text-xs uppercase font-bold text-sky-400 tracking-widest">Visual Inspection</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-display">Inside the Chandenvalle Plant</h2>
-          <p className="text-slate-400 text-xs max-w-xl mx-auto">
+          <span className="text-xs uppercase font-bold text-[#2563EB] tracking-widest">Visual Inspection</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-display">Inside the Chandenvalle Plant</h2>
+          <p className="text-slate-500 text-xs max-w-xl mx-auto">
             Review the automated machineries and assembly stations operating at our industrial park facility.
           </p>
         </div>
@@ -85,9 +85,9 @@ export default function Facilities() {
           {facilityImages.map((img, idx) => (
             <div 
               key={idx}
-              className="glass-panel rounded-xl overflow-hidden group border-white/5 flex flex-col"
+              className="glass-panel rounded-xl overflow-hidden group border-[#E2E8F0] flex flex-col"
             >
-              <div className="relative h-56 w-full overflow-hidden bg-slate-900">
+              <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img.url}
@@ -95,8 +95,8 @@ export default function Facilities() {
                   className="object-cover w-full h-full object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-4 border-t border-slate-900 bg-slate-950/40">
-                <span className="text-white text-xs font-bold font-display block">
+              <div className="p-4 border-t border-[#E2E8F0] bg-white">
+                <span className="text-[#0F172A] text-xs font-bold font-display block">
                   {img.title}
                 </span>
                 <span className="text-[10px] text-slate-500 block uppercase tracking-wider mt-0.5">

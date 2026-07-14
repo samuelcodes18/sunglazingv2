@@ -152,14 +152,14 @@ export default function Systems() {
       
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto mb-20 space-y-6 mt-10">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-          <Settings className="w-3.5 h-3.5 text-sky-400" />
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
+          <Settings className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>Facade Engineering</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-white font-display tracking-tight">
-          Systems & Technical Specs
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
+          Services & Technical Specs
         </h1>
-        <p className="text-slate-350 text-xs sm:text-sm max-w-xl mx-auto">
+        <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto">
           Sun Glazing designs, manufactures, and installs high-specification structural glass systems. Review our standard systems and run load simulations.
         </p>
       </section>
@@ -167,20 +167,20 @@ export default function Systems() {
       {/* 1. Comparison & Systems Tabs */}
       <section className="mb-24">
         <div className="text-center mb-10 space-y-3">
-          <span className="text-xs uppercase font-bold text-sky-400 tracking-widest">Compare Envelopes</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-display">Systems Portfolio</h2>
+          <span className="text-xs uppercase font-bold text-[#2563EB] tracking-widest">Compare Envelopes</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-display">Services Portfolio</h2>
         </div>
 
         {/* Tab Controls */}
-        <div className="flex flex-wrap gap-2 justify-center mb-10 border-b border-slate-900 pb-6">
+        <div className="flex flex-wrap gap-2 justify-center mb-10 border-b border-[#E2E8F0] pb-6">
           {facadeSystems.map((sys) => (
             <button
               key={sys.id}
               onClick={() => setActiveTab(sys.id)}
               className={`px-4 py-2.5 rounded-full text-xs font-semibold transition-all ${
                 activeTab === sys.id
-                  ? 'bg-sky-500 text-white shadow-lg'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/60'
+                  ? 'bg-[#2563EB] text-white shadow-lg shadow-blue-200'
+                  : 'text-slate-500 hover:text-[#0F172A] hover:bg-slate-50'
               }`}
             >
               {sys.name}
@@ -189,15 +189,15 @@ export default function Systems() {
         </div>
 
         {/* System Details Display Card */}
-        <div className="glass-panel p-6 sm:p-10 rounded-2xl border-white/5 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="glass-panel p-6 sm:p-10 rounded-2xl border-[#E2E8F0] grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="space-y-6">
-            <h3 className="text-white text-2xl font-extrabold font-display leading-tight">{activeSystem.name}</h3>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">{activeSystem.description}</p>
+            <h3 className="text-[#0F172A] text-2xl font-extrabold font-display leading-tight">{activeSystem.name}</h3>
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{activeSystem.description}</p>
             
             {activeSystem.engineeringDetail && (
-              <div className="border-l-2 border-sky-500 pl-4 space-y-2">
-                <span className="text-[10px] text-sky-400 font-bold uppercase tracking-wider block">Engineering Detail</span>
-                <p className="text-slate-400 text-xs leading-relaxed">{activeSystem.engineeringDetail}</p>
+              <div className="border-l-2 border-[#2563EB] pl-4 space-y-2">
+                <span className="text-[10px] text-[#2563EB] font-bold uppercase tracking-wider block">Engineering Detail</span>
+                <p className="text-slate-500 text-xs leading-relaxed">{activeSystem.engineeringDetail}</p>
               </div>
             )}
 
@@ -205,8 +205,8 @@ export default function Systems() {
               <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest block mb-3">Key Benefits</span>
               <ul className="grid grid-cols-1 gap-2.5">
                 {activeSystem.benefits.map((b, idx) => (
-                  <li key={idx} className="flex items-start space-x-2.5 text-xs text-slate-300">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start space-x-2.5 text-xs text-slate-600">
+                    <Check className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5" />
                     <span>{b}</span>
                   </li>
                 ))}
@@ -214,15 +214,15 @@ export default function Systems() {
             </div>
           </div>
 
-          <div className="space-y-6 bg-slate-950/50 p-6 rounded-xl border border-slate-900/80">
-            <h4 className="text-white text-sm font-bold font-display">Technical Parameters</h4>
+          <div className="space-y-6 bg-slate-50 p-6 rounded-xl border border-[#E2E8F0]">
+            <h4 className="text-[#0F172A] text-sm font-bold font-display">Technical Parameters</h4>
             
             {activeSystem.specs ? (
-              <div className="divide-y divide-slate-900 text-xs">
+              <div className="divide-y divide-[#E2E8F0] text-xs">
                 {Object.entries(activeSystem.specs).map(([key, value]) => (
                   <div key={key} className="py-3 flex justify-between gap-4">
                     <span className="text-slate-500 font-medium">{key}</span>
-                    <span className="text-slate-300 text-right">{value}</span>
+                    <span className="text-slate-700 text-right">{value}</span>
                   </div>
                 ))}
               </div>
@@ -231,11 +231,11 @@ export default function Systems() {
             )}
 
             {activeSystem.suitability && (
-              <div className="pt-4 border-t border-slate-900">
+              <div className="pt-4 border-t border-[#E2E8F0]">
                 <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest block mb-2">Ideal Applications</span>
                 <div className="flex flex-wrap gap-2">
                   {activeSystem.suitability.map((s, idx) => (
-                    <span key={idx} className="px-2.5 py-1 rounded bg-slate-900 text-[10px] text-slate-400">
+                    <span key={idx} className="px-2.5 py-1 rounded bg-white border border-[#E2E8F0] text-[10px] text-slate-600">
                       {s}
                     </span>
                   ))}
@@ -249,9 +249,9 @@ export default function Systems() {
       {/* 2. Interactive Glass Layer Visualizer */}
       <section className="mb-24">
         <div className="text-center mb-10 space-y-3">
-          <span className="text-xs uppercase font-bold text-sky-400 tracking-widest">Glass Physics</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-display">Glass Specification Visualizer</h2>
-          <p className="text-slate-400 text-xs max-w-xl mx-auto">
+          <span className="text-xs uppercase font-bold text-[#2563EB] tracking-widest">Glass Physics</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-display">Glass Specification Visualizer</h2>
+          <p className="text-slate-500 text-xs max-w-xl mx-auto">
             Toggle between premium glazing types to view cross-sections, weight distributions, and optical transmission indices.
           </p>
         </div>
@@ -266,31 +266,31 @@ export default function Systems() {
                 onClick={() => setSelectedGlass(spec.id)}
                 className={`p-4 rounded-xl text-left border transition-all ${
                   selectedGlass === spec.id
-                    ? 'bg-slate-900/60 border-sky-500/50 shadow-lg shadow-sky-500/5'
-                    : 'glass-panel border-white/5 hover:border-slate-800 hover:bg-slate-900/30'
+                    ? 'bg-blue-50 border-[#2563EB]/30 shadow-lg shadow-blue-100'
+                    : 'glass-panel border-[#E2E8F0] hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-[10px] text-sky-400 font-bold uppercase tracking-wider">{spec.category}</span>
+                  <span className="text-[10px] text-[#2563EB] font-bold uppercase tracking-wider">{spec.category}</span>
                   <span className="text-[10px] text-slate-500">{spec.thickness}</span>
                 </div>
-                <h3 className="text-white text-sm font-bold mt-1 font-display">{spec.name}</h3>
+                <h3 className="text-[#0F172A] text-sm font-bold mt-1 font-display">{spec.name}</h3>
               </button>
             ))}
           </div>
 
           {/* Graphical Display Panel */}
-          <div className="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-2xl border-white/5 flex flex-col justify-between">
+          <div className="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] flex flex-col justify-between">
             
             {/* Visual Glass cross-section mockup */}
-            <div className="py-6 flex flex-col items-center justify-center bg-slate-950/45 rounded-xl border border-slate-900/80 mb-6 p-4">
+            <div className="py-6 flex flex-col items-center justify-center bg-slate-100 rounded-xl border border-[#E2E8F0] mb-6 p-4">
               <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-6 font-bold">Cross-Sectional Layers</span>
               
               <div className="flex flex-row justify-center items-stretch h-36 w-full max-w-lg space-x-1.5 px-6">
                 {selectedGlassData.layers.map((layer, idx) => {
-                  let bgStyle = "bg-sky-400/20 border-sky-400/40"; // glass
-                  if (layer.type === "pvb") bgStyle = "bg-amber-500/35 border-amber-500/40"; // pvb
-                  if (layer.type === "air") bgStyle = "bg-slate-800/10 border-slate-800/40 border-dashed"; // air
+                  let bgStyle = "bg-blue-100 border-blue-200"; // glass
+                  if (layer.type === "pvb") bgStyle = "bg-amber-100 border-amber-200"; // pvb
+                  if (layer.type === "air") bgStyle = "bg-slate-100 border-slate-200 border-dashed"; // air
                   
                   return (
                     <div
@@ -298,10 +298,10 @@ export default function Systems() {
                       className={`flex-grow border rounded flex flex-col items-center justify-between py-4 text-center transition-all ${bgStyle}`}
                       title={`${layer.name} (${layer.thick})`}
                     >
-                      <span className="text-[9px] text-slate-500 font-bold font-display uppercase writing-mode-vertical">
+                      <span className="text-[9px] text-slate-600 font-bold font-display uppercase writing-mode-vertical">
                         {layer.thick}
                       </span>
-                      <span className="text-[10px] text-white font-bold transform -rotate-90 origin-center whitespace-nowrap hidden sm:inline-block">
+                      <span className="text-[10px] text-[#0F172A] font-bold transform -rotate-90 origin-center whitespace-nowrap hidden sm:inline-block">
                         {layer.type === 'glass' ? 'Glass' : layer.type === 'pvb' ? 'PVB' : 'Air Gap'}
                       </span>
                     </div>
@@ -317,17 +317,17 @@ export default function Systems() {
             {/* Properties and specs */}
             <div className="space-y-6">
               <div>
-                <h4 className="text-white text-sm font-bold font-display">Envelope Performance Properties</h4>
-                <p className="text-slate-400 text-xs mt-1">{selectedGlassData.description}</p>
+                <h4 className="text-[#0F172A] text-sm font-bold font-display">Envelope Performance Properties</h4>
+                <p className="text-slate-500 text-xs mt-1">{selectedGlassData.description}</p>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-4 border-t border-slate-900">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-4 border-t border-[#E2E8F0]">
                 <div className="space-y-1">
                   <div className="flex items-center space-x-1 text-slate-500">
                     <Scale className="w-3.5 h-3.5" />
                     <span className="text-[10px] font-semibold uppercase tracking-wider">Weight</span>
                   </div>
-                  <span className="text-white text-xs font-bold block">{selectedGlassData.weight}</span>
+                  <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.weight}</span>
                 </div>
                 
                 <div className="space-y-1">
@@ -335,7 +335,7 @@ export default function Systems() {
                     <Eye className="w-3.5 h-3.5" />
                     <span className="text-[10px] font-semibold uppercase tracking-wider">VLT (Light)</span>
                   </div>
-                  <span className="text-white text-xs font-bold block">{selectedGlassData.transmission}</span>
+                  <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.transmission}</span>
                 </div>
 
                 <div className="space-y-1">
@@ -343,7 +343,7 @@ export default function Systems() {
                     <Thermometer className="w-3.5 h-3.5" />
                     <span className="text-[10px] font-semibold uppercase tracking-wider">U-Value</span>
                   </div>
-                  <span className="text-white text-xs font-bold block">{selectedGlassData.uValue}</span>
+                  <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.uValue}</span>
                 </div>
 
                 <div className="space-y-1">
@@ -351,7 +351,7 @@ export default function Systems() {
                     <Settings className="w-3.5 h-3.5" />
                     <span className="text-[10px] font-semibold uppercase tracking-wider">g-Value</span>
                   </div>
-                  <span className="text-white text-xs font-bold block">{selectedGlassData.gValue}</span>
+                  <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.gValue}</span>
                 </div>
 
                 <div className="space-y-1">
@@ -359,7 +359,7 @@ export default function Systems() {
                     <Volume2 className="w-3.5 h-3.5" />
                     <span className="text-[10px] font-semibold uppercase tracking-wider">Acoustics</span>
                   </div>
-                  <span className="text-white text-xs font-bold block">{selectedGlassData.acoustic}</span>
+                  <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.acoustic}</span>
                 </div>
               </div>
             </div>
@@ -370,25 +370,25 @@ export default function Systems() {
 
       {/* 3. Wind Load Calculator */}
       <section className="mb-10">
-        <div className="glass-panel p-8 sm:p-12 rounded-3xl border-white/5 relative overflow-hidden bg-gradient-to-br from-slate-900/60 to-slate-950/80">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 blur-[120px] pointer-events-none" />
+        <div className="glass-panel p-8 sm:p-12 rounded-3xl border-[#E2E8F0] relative overflow-hidden bg-gradient-to-br from-blue-50/50 to-white">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#2563EB]/5 blur-[120px] pointer-events-none" />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Form */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center space-x-2 text-sky-400">
+              <div className="flex items-center space-x-2 text-[#2563EB]">
                 <Calculator className="w-5 h-5" />
                 <span className="text-xs uppercase font-bold tracking-widest">Engineering Estimations</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-display">Wind Load & Glazing Calculator</h2>
-              <p className="text-slate-400 text-xs leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-display">Wind Load & Glazing Calculator</h2>
+              <p className="text-slate-500 text-xs leading-relaxed">
                 Estimate velocity wind pressures ($kN/m^2$) acting on the structural facade based on wind speed, building height, and regional terrain categories.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
                 {/* Wind Speed */}
                 <div className="space-y-2">
-                  <label className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider block">Wind Speed (m/s)</label>
+                  <label className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider block">Wind Speed (m/s)</label>
                   <input
                     type="range"
                     min="33"
@@ -396,18 +396,18 @@ export default function Systems() {
                     step="1"
                     value={windSpeed}
                     onChange={(e) => setWindSpeed(Number(e.target.value))}
-                    className="w-full h-1 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-sky-400"
+                    className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#2563EB]"
                   />
-                  <div className="flex justify-between text-xs font-bold text-white mt-1">
+                  <div className="flex justify-between text-xs font-bold text-[#0F172A] mt-1">
                     <span>33 m/s</span>
-                    <span className="text-sky-400">{windSpeed} m/s</span>
+                    <span className="text-[#2563EB]">{windSpeed} m/s</span>
                     <span>55 m/s</span>
                   </div>
                 </div>
 
                 {/* Building Height */}
                 <div className="space-y-2">
-                  <label className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider block">Building Height (m)</label>
+                  <label className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider block">Building Height (m)</label>
                   <input
                     type="range"
                     min="5"
@@ -415,22 +415,22 @@ export default function Systems() {
                     step="5"
                     value={height}
                     onChange={(e) => setHeight(Number(e.target.value))}
-                    className="w-full h-1 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-sky-400"
+                    className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#2563EB]"
                   />
-                  <div className="flex justify-between text-xs font-bold text-white mt-1">
+                  <div className="flex justify-between text-xs font-bold text-[#0F172A] mt-1">
                     <span>5m</span>
-                    <span className="text-sky-400">{height}m</span>
+                    <span className="text-[#2563EB]">{height}m</span>
                     <span>150m</span>
                   </div>
                 </div>
 
                 {/* Terrain Category */}
                 <div className="space-y-2">
-                  <label className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider block">Terrain Exposure</label>
+                  <label className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider block">Terrain Exposure</label>
                   <select
                     value={terrain}
                     onChange={(e) => setTerrain(e.target.value)}
-                    className="w-full px-3 py-2 rounded bg-slate-950 border border-slate-800 text-xs text-slate-200 focus:outline-none focus:border-sky-500"
+                    className="w-full px-3 py-2 rounded bg-white border border-[#E2E8F0] text-xs text-[#0F172A] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB]/20"
                   >
                     <option value="Category-1">Category 1 (Open coast/lake)</option>
                     <option value="Category-2">Category 2 (Open flat land)</option>
@@ -443,7 +443,7 @@ export default function Systems() {
               <div className="pt-4">
                 <button
                   onClick={handleCalculate}
-                  className="px-6 py-2.5 rounded-full text-xs font-bold bg-sky-500 text-white hover:bg-sky-400 transition-all flex items-center space-x-1.5"
+                  className="px-6 py-2.5 rounded-full text-xs font-bold bg-[#2563EB] text-white hover:bg-[#1d4ed8] transition-all flex items-center space-x-1.5 shadow-lg shadow-blue-200"
                 >
                   <span>Simulate Calculations</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -452,24 +452,24 @@ export default function Systems() {
             </div>
 
             {/* Result Board */}
-            <div className="lg:col-span-5 bg-slate-950/65 border border-slate-900 rounded-2xl p-6 sm:p-8 space-y-6 flex flex-col justify-between min-h-[300px]">
+            <div className="lg:col-span-5 bg-white border border-[#E2E8F0] rounded-2xl p-6 sm:p-8 space-y-6 flex flex-col justify-between min-h-[300px] shadow-sm">
               <div>
                 <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest block">Estimated Wind Pressure</span>
                 <div className="flex items-baseline space-x-2 mt-2">
                   <span className="text-4xl sm:text-5xl font-extrabold text-amber-500 font-display">{calcResult.pressure}</span>
-                  <span className="text-slate-400 text-sm font-semibold">kN/m²</span>
+                  <span className="text-slate-500 text-sm font-semibold">kN/m²</span>
                 </div>
               </div>
 
-              <div className="space-y-2 border-t border-slate-900 pt-4">
-                <span className="text-[10px] text-sky-400 font-bold uppercase tracking-widest block">Recommended Glazing Assembly</span>
-                <span className="text-white text-sm font-bold block">{calcResult.requiredGlass}</span>
-                <p className="text-slate-400 text-[11px] leading-relaxed mt-1">
+              <div className="space-y-2 border-t border-[#E2E8F0] pt-4">
+                <span className="text-[10px] text-[#2563EB] font-bold uppercase tracking-widest block">Recommended Glazing Assembly</span>
+                <span className="text-[#0F172A] text-sm font-bold block">{calcResult.requiredGlass}</span>
+                <p className="text-slate-500 text-[11px] leading-relaxed mt-1">
                   {calcResult.description}
                 </p>
               </div>
 
-              <div className="text-[10px] text-slate-500 italic mt-4 pt-2 border-t border-slate-900/60">
+              <div className="text-[10px] text-slate-400 italic mt-4 pt-2 border-t border-[#E2E8F0]">
                 *Calculations based on standard structural formulas. Final facade elevations must undergo comprehensive wind-tunnel verification.
               </div>
             </div>
