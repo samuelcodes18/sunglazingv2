@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sun Glazing Website (2026 Redesign)
 
-## Getting Started
+## 🌐 Live Website
 
-First, run the development server:
+https://sunglazingv2.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A modern redesign and redevelopment of the official website for **Sun Glazing & Fabrication Pvt. Ltd.**, one of South India's leading facade engineering and curtain wall glazing companies.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project modernizes the legacy corporate website with a contemporary enterprise-grade design, improved user experience, responsive layouts, and scalable architecture while preserving the company's history, projects, and technical expertise. Sun Glazing specializes in facade envelopes, curtain wall systems, structural glazing, and architectural glass solutions across commercial, hospitality, residential, and infrastructure sectors. :contentReference[oaicite:0]{index=0}
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Features Implemented
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Homepage
+- Modern hero image carousel with project showcase
+- Company introduction and highlights
+- Services overview section
+- Featured projects showcase
+- Client logo marquee
+- Statistics and trust indicators
+- Call-to-action sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### About Us
+- Company history and background
+- Leadership and organization details
+- Mission and Vision sections
+- Corporate journey and milestones
 
-## Deploy on Vercel
+### Services
+- Unitized Curtain Wall Systems
+- Semi Unitized Curtain Wall Systems
+- Structural Glazing
+- Glass Elevation Systems
+- Building Elevation Solutions
+- Architectural Facade Systems
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Projects
+- Project portfolio showcase
+- Project categorization and filtering
+- Dedicated project detail pages
+- Image galleries and project metadata
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Additional Pages
+- Facilities
+- Awards & Certifications
+- Our Clients
+- Contact Information
+
+---
+
+## 🎨 Design Improvements
+
+- Modern corporate UI redesign
+- Light blue enterprise theme
+- Improved visual hierarchy
+- Responsive layouts for all screen sizes
+- Enhanced navigation experience
+- Consistent typography and spacing
+- Improved accessibility and readability
+- Premium architectural-inspired design language
+
+---
+
+## ⚙️ Technology Stack
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+### UI Components
+- shadcn/ui
+- Radix UI
+
+### Deployment
+- Vercel
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+## 🏢 Company Profile
+
+**Sun Glazing & Fabrication Pvt. Ltd.**
+
+Specializing in:
+
+- Curtain Wall Systems
+- Structural Glazing
+- Unitized Facade Systems
+- Architectural Glass Solutions
+- Turnkey Facade Engineering Projects
+- Building Envelope Solutions
+
+The company has delivered facade solutions across IT parks, airports, hospitality projects, commercial buildings, and residential developments throughout India. :contentReference[oaicite:1]{index=1}
+
+---
+
+## 🚀 Deployment
+
+Production deployment is hosted on Vercel:
+
+https://sunglazingv2.vercel.app/
+
+---
+
+## 👨‍💻 Developed By
+
+**Samuel Jeevan Reddy**
+
+---
+
+## 📄 License
+
+This project was developed for **Sun Glazing & Fabrication Pvt. Ltd.**
+
+All rights reserved.
