@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Award, ShieldCheck, FileText, CheckCircle2, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Awards() {
@@ -22,7 +21,6 @@ export default function Awards() {
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto mb-20 space-y-6 mt-10">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
-          <Award className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>Accreditation & Quality</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
@@ -37,9 +35,6 @@ export default function Awards() {
       <section className="mb-24 grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-[#2563EB]">
-            <ShieldCheck className="w-5 h-5" />
-          </div>
           <h3 className="text-[#0F172A] text-lg font-bold font-display">System Integrity</h3>
           <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             Our systems conform strictly to European and ASTM standards for curtain wall installations, backed by collaborations with system developers like Reynaers Belgium.
@@ -47,9 +42,6 @@ export default function Awards() {
         </div>
 
         <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-500">
-            <FileText className="w-5 h-5" />
-          </div>
           <h3 className="text-[#0F172A] text-lg font-bold font-display">Audit & Calculation Certs</h3>
           <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             We provide third-party validated calculations and loading charts for every project in South India, with engineering audit clearance from IIT Chennai.
@@ -57,9 +49,6 @@ export default function Awards() {
         </div>
 
         <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-500">
-            <CheckCircle2 className="w-5 h-5" />
-          </div>
           <h3 className="text-[#0F172A] text-lg font-bold font-display">Safety Accreditations</h3>
           <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             100% adherence to corporate safety codes for high-rise works, crane/hoisting procedures, and panel handling systems.

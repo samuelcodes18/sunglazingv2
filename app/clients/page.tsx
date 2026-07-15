@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Users, Building, MapPin, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { projects } from '@/lib/data/projects';
 
@@ -61,7 +60,6 @@ export default function Clients() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-white text-xs font-semibold uppercase tracking-wider backdrop-blur-sm mb-4"
           >
-            <Users className="w-3.5 h-3.5" />
             <span>Our Clients</span>
           </motion.div>
           <motion.h1
@@ -181,7 +179,6 @@ export default function Clients() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2563EB] text-white text-[13px] font-semibold hover:bg-[#1d4ed8] transition-colors shadow-lg shadow-blue-200"
           >
             Get in Touch
-            <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
       </section>

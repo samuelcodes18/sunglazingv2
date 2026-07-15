@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, CheckCircle, Clock, Building, Send, ChevronDown, Check } from 'lucide-react';
 import { companyOverview } from '@/lib/data/partners';
 
 export default function Contact() {
@@ -48,7 +47,6 @@ export default function Contact() {
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto mb-20 space-y-6 mt-10">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
-          <Clock className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>Inquire Now</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
@@ -76,7 +74,6 @@ export default function Contact() {
             <div className="glass-panel p-6 rounded-xl border-[#E2E8F0] space-y-3 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 blur-2xl pointer-events-none" />
               <div className="flex items-center space-x-2 text-[#2563EB]">
-                <MapPin className="w-4 h-4" />
                 <h3 className="text-[#0F172A] text-sm font-bold font-display">{offices.corporate.title}</h3>
               </div>
               <p className="text-slate-600 text-xs leading-relaxed">{offices.corporate.address}</p>
@@ -106,7 +103,6 @@ export default function Contact() {
             <div className="glass-panel p-6 rounded-xl border-[#E2E8F0] space-y-3 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-amber-50 blur-2xl pointer-events-none" />
               <div className="flex items-center space-x-2 text-amber-500">
-                <Building className="w-4 h-4" />
                 <h3 className="text-[#0F172A] text-sm font-bold font-display">{offices.factory.title}</h3>
               </div>
               <p className="text-slate-600 text-xs leading-relaxed">{offices.factory.address}</p>
@@ -135,9 +131,6 @@ export default function Contact() {
           
           {isSubmitted ? (
             <div className="text-center py-10 space-y-4">
-              <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 mx-auto">
-                <Check className="w-6 h-6" />
-              </div>
               <h3 className="text-[#0F172A] text-base font-bold font-display">Estimate Request Received</h3>
               <p className="text-slate-500 text-xs max-w-sm mx-auto leading-relaxed">
                 Thank you for contacting Sun Glazing. Your specification metrics have been routed to our project managers.
@@ -276,7 +269,6 @@ export default function Contact() {
                   className="w-full px-6 py-3 rounded-lg font-bold bg-[#2563EB] text-white hover:bg-[#1d4ed8] shadow-lg shadow-blue-200 hover:shadow-blue-300 transition-all flex items-center justify-center space-x-2"
                 >
                   <span>Submit Estimate Request</span>
-                  <Send className="w-3.5 h-3.5" />
                 </button>
               </div>
             </form>
@@ -315,7 +307,6 @@ export default function Contact() {
               className="inline-flex items-center space-x-1.5 text-xs text-[#2563EB] font-semibold hover:underline"
             >
               <span>Open in Google Maps</span>
-              <Send className="w-3 h-3" />
             </a>
           </div>
 
@@ -340,7 +331,6 @@ export default function Contact() {
               className="inline-flex items-center space-x-1.5 text-xs text-amber-500 font-semibold hover:underline"
             >
               <span>Get Directions to Plant</span>
-              <Send className="w-3 h-3" />
             </a>
           </div>
         </div>

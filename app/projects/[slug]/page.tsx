@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Compass, Building, CheckCircle, ArrowRight, ShieldCheck, Sun } from 'lucide-react';
 import { projects } from '@/lib/data/projects';
 
 interface PageProps {
@@ -36,7 +35,6 @@ export default async function ProjectDetail({ params }: PageProps) {
           href="/projects"
           className="inline-flex items-center space-x-2 text-xs font-semibold text-[#2563EB] hover:text-[#1d4ed8] group"
         >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
           <span>Back to Landmarks</span>
         </Link>
       </div>
@@ -62,7 +60,6 @@ export default async function ProjectDetail({ params }: PageProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600">
                 {project.highlights.map((h, hIdx) => (
                   <div key={hIdx} className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-[#2563EB] shrink-0" />
                     <span>{h}</span>
                   </div>
                 ))}
@@ -93,38 +90,26 @@ export default async function ProjectDetail({ params }: PageProps) {
             
             <div className="divide-y divide-[#E2E8F0] text-xs">
               <div className="py-3.5 flex justify-between">
-                <span className="text-slate-500 font-medium flex items-center space-x-1.5">
-                  <Compass className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Location</span>
-                </span>
+                <span className="text-slate-500 font-medium">Location</span>
                 <span className="text-slate-700 font-semibold">{project.location}</span>
               </div>
 
               {project.client && (
                 <div className="py-3.5 flex justify-between">
-                  <span className="text-slate-500 font-medium flex items-center space-x-1.5">
-                    <Building className="w-3.5 h-3.5 text-slate-400" />
-                    <span>Client</span>
-                  </span>
+                  <span className="text-slate-500 font-medium">Client</span>
                   <span className="text-slate-700 font-semibold">{project.client}</span>
                 </div>
               )}
 
               <div className="py-3.5 flex justify-between">
-                <span className="text-slate-500 font-medium flex items-center space-x-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Facade System</span>
-                </span>
+                <span className="text-slate-500 font-medium">Facade System</span>
                 <span className="text-slate-700 font-semibold text-right max-w-[200px]">
                   {project.systemUsed}
                 </span>
               </div>
 
               <div className="py-3.5 flex justify-between">
-                <span className="text-slate-500 font-medium flex items-center space-x-1.5">
-                  <Sun className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Glass Quality</span>
-                </span>
+                <span className="text-slate-500 font-medium">Glass Quality</span>
                 <span className="text-slate-700 font-semibold">Saint-Gobain Performance</span>
               </div>
             </div>
@@ -136,13 +121,12 @@ export default async function ProjectDetail({ params }: PageProps) {
               <span className="text-[#0F172A] text-xs font-bold font-display">Inquire about similar envelopes</span>
               <span className="text-[10px] text-slate-500 block">We offer customized aluminum die extrusions.</span>
             </div>
-            <Link
-              href="/contact?type=estimate"
-              className="p-2 bg-[#2563EB] text-white rounded-full hover:bg-[#1d4ed8] transition-colors"
-              aria-label="Request quote"
-            >
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              <Link
+                href="/contact?type=estimate"
+                className="p-2 bg-[#2563EB] text-white rounded-full hover:bg-[#1d4ed8] transition-colors"
+                aria-label="Request quote"
+              >
+              </Link>
           </div>
         </div>
 

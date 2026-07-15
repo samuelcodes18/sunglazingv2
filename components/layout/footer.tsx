@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { companyOverview } from '@/lib/data/partners';
 
 export default function Footer() {
@@ -142,7 +142,6 @@ export default function Footer() {
               <li className="pt-2 flex items-center space-x-1.5 text-[#2563EB] hover:text-[#1d4ed8] cursor-pointer">
                 <Link href="/contact" className="flex items-center space-x-1">
                   <span>View interactive maps</span>
-                  <ExternalLink className="w-3 h-3" />
                 </Link>
               </li>
             </ul>

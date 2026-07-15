@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Filter, Building, Compass, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '@/lib/data/projects';
 
@@ -23,7 +22,6 @@ export default function Projects() {
       {/* Page Header */}
       <section className="text-center max-w-3xl mx-auto mb-16 space-y-6 mt-10">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
-          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
           <span>Our Envelopes</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
@@ -37,7 +35,6 @@ export default function Projects() {
       {/* Filter Tabs */}
       <section className="mb-12 flex flex-wrap gap-2 justify-center items-center">
         <div className="flex items-center space-x-2 text-slate-500 mr-4 text-xs font-semibold uppercase tracking-wider">
-          <Filter className="w-4 h-4 text-[#2563EB]" />
           <span>Sector Filter:</span>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -94,7 +91,6 @@ export default function Projects() {
               <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-1.5 text-slate-500 text-[10px] uppercase font-bold tracking-wider">
-                    <Compass className="w-3.5 h-3.5" />
                     <span>{project.location}</span>
                   </div>
                   <h3 className="text-[#0F172A] text-base sm:text-lg font-bold font-display leading-tight">
@@ -115,7 +111,6 @@ export default function Projects() {
                     className="w-8 h-8 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white group-hover:border-[#2563EB] transition-all shrink-0"
                     aria-label="View project case study"
                   >
-                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -127,7 +122,6 @@ export default function Projects() {
       {/* Empty State */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-20 glass-panel rounded-2xl border-[#E2E8F0]">
-          <Building className="w-12 h-12 text-slate-400 mx-auto mb-4" />
           <h3 className="text-[#0F172A] font-bold font-display text-lg">No Projects Found</h3>
           <p className="text-slate-500 text-xs mt-1">Check back later or contact our desk for estimations.</p>
         </div>

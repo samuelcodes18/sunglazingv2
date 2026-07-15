@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, Coins, ShieldCheck, HeartHandshake } from 'lucide-react';
+
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { projects } from '@/lib/data/projects';
 import { facadeSystems } from '@/lib/data/systems';
+import ClientMarquee from '@/components/client-marquee';
 
 // ─── Data ────────────────────────────────────────────────────────
 const featuredSlugs = [
@@ -21,44 +22,23 @@ const featuredSlugs = [
   'sas-i-tower-c-block',
 ];
 
-const partnerLogos = [
-  "Saint-Gobain Glass",
-  "Reynaers, Belgium",
-  "IIT Chennai",
-  "Kinlong Architectural",
-  "Alucopanel Korea",
-  "Alpolic Japan",
-  "Alcopla Taiwan"
-];
 
-const clientLogos = [
-  ...new Set(projects.map(p => p.client).filter(Boolean)),
-];
 
 const values = [
   {
-    icon: Coins,
     label: "Cost Optimization",
     body: "Continuously improving operational efficiency in facade construction using process optimization, innovation and automation.",
     color: "from-amber-500/10 to-transparent",
-    accent: "text-amber-500",
-    border: "border-amber-200",
   },
   {
-    icon: ShieldCheck,
     label: "Uncompromising Quality",
     body: "We engineer facades that strictly comply with international building codes, vetted by IIT Chennai and the Reynaers Institute.",
     color: "from-blue-500/10 to-transparent",
-    accent: "text-[#2563EB]",
-    border: "border-blue-200",
   },
   {
-    icon: HeartHandshake,
     label: "Collaborative Delight",
     body: "Working harmoniously with owners, architects, PMCs and facade consultants to deliver excellence on every project.",
     color: "from-emerald-500/10 to-transparent",
-    accent: "text-emerald-500",
-    border: "border-emerald-200",
   },
 ];
 
@@ -206,14 +186,12 @@ export default function Home() {
                     className="group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-[#0F172A] text-[13px] font-semibold tracking-wide hover:bg-slate-100 transition-colors shadow-lg"
                   >
                     Explore Portfolio
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </Link>
                   <Link
                     href="/services"
                     className="group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full border border-white/30 text-white/90 text-[13px] font-medium tracking-wide hover:border-white/50 hover:text-white hover:bg-white/10 transition-all"
                   >
                     Our Services
-                    <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </motion.div>
               </div>
@@ -250,7 +228,6 @@ export default function Home() {
                     className="mt-4 inline-flex items-center gap-1.5 text-[12px] text-[#38bdf8] font-medium group hover:gap-2.5 transition-all"
                   >
                     View case study
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
                   </Link>
                 </motion.div>
               </AnimatePresence>
@@ -382,7 +359,6 @@ export default function Home() {
               className="group inline-flex items-center gap-2.5 text-[13px] font-medium text-[#2563EB] hover:text-[#1d4ed8] transition-colors"
             >
               Learn about the organization
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </motion.div>
 
@@ -468,7 +444,6 @@ export default function Home() {
               className="group shrink-0 inline-flex items-center gap-2 text-[12px] text-slate-500 hover:text-[#0F172A] border border-[#E2E8F0] hover:border-[#2563EB]/30 px-5 py-2.5 rounded-full transition-all hover:bg-blue-50"
             >
               View all systems
-              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
 
@@ -504,7 +479,6 @@ export default function Home() {
                   {/* Bottom link */}
                   <div className="mt-6 flex items-center gap-1.5 text-[12px] text-slate-400 group-hover:text-[#2563EB] transition-colors">
                     <span>Technical details</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
                   </div>
 
                   {/* Hover shimmer border */}
@@ -550,7 +524,6 @@ export default function Home() {
             className="group shrink-0 inline-flex items-center gap-2 text-[12px] text-slate-500 hover:text-[#0F172A] border border-[#E2E8F0] hover:border-[#2563EB]/30 px-5 py-2.5 rounded-full transition-all hover:bg-blue-50"
           >
             Full portfolio
-            <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Link>
         </motion.div>
 
@@ -645,10 +618,6 @@ export default function Home() {
               {/* Gradient top edge */}
               <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${v.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-6 bg-gradient-to-br ${v.color} border ${v.border}`}>
-                <v.icon className={`w-5 h-5 ${v.accent}`} />
-              </div>
-
               <h3 className="font-display font-semibold text-[#0F172A] text-[17px] leading-snug mb-3 group-hover:text-[#2563EB] transition-colors">
                 {v.label}
               </h3>
@@ -663,54 +632,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════
           7. CLIENT LOGOS MARQUEE
       ═══════════════════════════════════════════════════ */}
-      <section className="py-16 border-t border-b border-[#E2E8F0] bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 mb-10">
-          <p className="text-slate-500 text-[11px] font-semibold tracking-[0.22em] uppercase text-center">
-            Trusted by Industry Leaders
-          </p>
-        </div>
-
-        <div className="relative w-full">
-          {/* Left edge fade */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          {/* Right edge fade */}
-          <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-
-          {/* Row 1 — scrolls left */}
-          <div className="flex mb-4">
-            <div className="animate-marquee flex items-center shrink-0">
-              {[...clientLogos, ...clientLogos].map((client, i) => (
-                <div
-                  key={`r1-${i}`}
-                  className="flex items-center gap-3 mx-4 sm:mx-6 px-5 sm:px-6 py-3 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] hover:border-[#2563EB]/30 hover:bg-blue-50/50 transition-all shrink-0"
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#2563EB]/20 shrink-0" />
-                  <span className="text-slate-600 hover:text-[#0F172A] text-[13px] sm:text-[14px] font-semibold whitespace-nowrap transition-colors">
-                    {client}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Row 2 — scrolls right (reverse) */}
-          <div className="flex">
-            <div className="animate-marquee flex items-center shrink-0" style={{ animationDirection: 'reverse' }}>
-              {[...partnerLogos, ...partnerLogos].map((partner, i) => (
-                <div
-                  key={`r2-${i}`}
-                  className="flex items-center gap-3 mx-4 sm:mx-6 px-5 sm:px-6 py-3 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] hover:border-[#2563EB]/30 hover:bg-blue-50/50 transition-all shrink-0"
-                >
-                  <span className="w-2 h-2 rounded-full bg-amber-400/40 shrink-0" />
-                  <span className="text-slate-600 hover:text-[#0F172A] text-[13px] sm:text-[14px] font-semibold whitespace-nowrap transition-colors">
-                    {partner}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ClientMarquee />
 
       {/* ════════════════════════════════════════════════════
           8. CTA — Full-width architectural closing block
@@ -755,14 +677,12 @@ export default function Home() {
                 className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#2563EB] text-white text-[13px] font-semibold tracking-wide hover:bg-[#1d4ed8] transition-colors whitespace-nowrap shadow-lg shadow-blue-200"
               >
                 Request Corporate Quote
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
                 href="/facilities"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-[#E2E8F0] text-slate-600 text-[13px] font-medium hover:border-[#2563EB]/30 hover:text-[#2563EB] hover:bg-blue-50 transition-all whitespace-nowrap"
               >
                 Inspect Factory Capacity
-                <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
               </Link>
             </div>
           </div>

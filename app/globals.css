@@ -10,8 +10,8 @@
 }
 
 @theme {
-  --font-display: var(--font-outfit), sans-serif;
-  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-open-sans), sans-serif;
+  --font-sans: var(--font-open-sans), sans-serif;
 
   --color-brand-primary: #F8FAFC;
   --color-brand-secondary: #EFF6FF;
@@ -134,14 +134,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ─── Marquee ──────────────────────────────────────────────── */
-@keyframes marquee {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+.marquee-row {
+  overflow: hidden;
+  width: 100%;
 }
-.animate-marquee {
+.marquee-track {
   display: flex;
-  animation: marquee 40s linear infinite;
+  width: max-content;
+  will-change: transform;
 }
-.animate-marquee:hover {
+.animate-marquee-left {
+  animation: marquee-left 60s linear infinite;
+}
+.animate-marquee-left:hover {
   animation-play-state: paused;
+}
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
 }

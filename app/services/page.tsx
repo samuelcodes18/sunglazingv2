@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, HelpCircle, Check, ShieldCheck, Ruler, Scale, Eye, Thermometer, Volume2, Calculator, Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { facadeSystems, FacadeSystem } from '@/lib/data/systems';
 
@@ -153,7 +153,6 @@ export default function Systems() {
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto mb-20 space-y-6 mt-10">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
-          <Settings className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>Facade Engineering</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
@@ -323,42 +322,27 @@ export default function Systems() {
 
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-4 border-t border-[#E2E8F0]">
                 <div className="space-y-1">
-                  <div className="flex items-center space-x-1 text-slate-500">
-                    <Scale className="w-3.5 h-3.5" />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider">Weight</span>
-                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Weight</span>
                   <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.weight}</span>
                 </div>
                 
                 <div className="space-y-1">
-                  <div className="flex items-center space-x-1 text-slate-500">
-                    <Eye className="w-3.5 h-3.5" />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider">VLT (Light)</span>
-                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">VLT (Light)</span>
                   <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.transmission}</span>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex items-center space-x-1 text-slate-500">
-                    <Thermometer className="w-3.5 h-3.5" />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider">U-Value</span>
-                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">U-Value</span>
                   <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.uValue}</span>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex items-center space-x-1 text-slate-500">
-                    <Settings className="w-3.5 h-3.5" />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider">g-Value</span>
-                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">g-Value</span>
                   <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.gValue}</span>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex items-center space-x-1 text-slate-500">
-                    <Volume2 className="w-3.5 h-3.5" />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider">Acoustics</span>
-                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Acoustics</span>
                   <span className="text-[#0F172A] text-xs font-bold block">{selectedGlassData.acoustic}</span>
                 </div>
               </div>
@@ -377,7 +361,6 @@ export default function Systems() {
             {/* Form */}
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center space-x-2 text-[#2563EB]">
-                <Calculator className="w-5 h-5" />
                 <span className="text-xs uppercase font-bold tracking-widest">Engineering Estimations</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-display">Wind Load & Glazing Calculator</h2>
@@ -446,7 +429,6 @@ export default function Systems() {
                   className="px-6 py-2.5 rounded-full text-xs font-bold bg-[#2563EB] text-white hover:bg-[#1d4ed8] transition-all flex items-center space-x-1.5 shadow-lg shadow-blue-200"
                 >
                   <span>Simulate Calculations</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
             </div>

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Building, Users, Clock, Award, Globe, ArrowRight, ChevronRight, Factory, Briefcase, GraduationCap, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { leadership, collaborators } from '@/lib/data/partners';
 
@@ -49,28 +48,24 @@ const milestones = [
 
 const orgStructure = [
   {
-    icon: Briefcase,
     title: "Corporate Office",
     subtitle: "Begumpet, Hyderabad",
     description: "Houses the executive leadership, estimation desk, design engineering, and project management teams.",
     color: "blue",
   },
   {
-    icon: Factory,
     title: "Manufacturing Facility",
     subtitle: "Chandenvalle, Hyderabad",
     description: "State-of-the-art production plant with CNC machining, EPDM pressing, silicon curing, and automated assembly lines.",
     color: "amber",
   },
   {
-    icon: Users,
     title: "Project Execution",
     subtitle: "Pan-South India",
     description: "Dedicated site teams managing facade installation, quality assurance, and on-site coordination across all active projects.",
     color: "emerald",
   },
   {
-    icon: Globe,
     title: "Global Partnerships",
     subtitle: "Belgium, Dubai, China, Korea",
     description: "Strategic alliances with Reynaers, Saint-Gobain, Kinlong, and other international technology partners.",
@@ -89,7 +84,6 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider"
         >
-          <Building className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>About Us</span>
         </motion.div>
         
@@ -325,11 +319,8 @@ export default function About() {
                 transition={{ duration: 0.65, ease: EASE_OUT, delay: index * 0.08 }}
                 className="glass-panel p-6 rounded-2xl border-[#E2E8F0] space-y-4"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${colors.bg} border ${colors.border}`}>
-                  <unit.icon className={`w-6 h-6 ${colors.icon}`} />
-                </div>
                 <div>
-                  <h3 className="text-[#0F172A] text-base font-bold font-display">{unit.title}</h3>
+                <h3 className="text-[#0F172A] text-base font-bold font-display">{unit.title}</h3>
                   <span className="text-[10px] text-[#2563EB] font-semibold uppercase tracking-wider">{unit.subtitle}</span>
                 </div>
                 <p className="text-slate-500 text-xs leading-relaxed">
@@ -386,9 +377,6 @@ export default function About() {
           >
             <div className="glass-panel p-8 sm:p-10 rounded-2xl border-[#E2E8F0] relative overflow-hidden bg-gradient-to-br from-blue-50 to-white space-y-6">
               <div className="absolute top-0 right-0 w-40 h-40 bg-blue-100/50 blur-3xl pointer-events-none" />
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#2563EB]">
-                <Award className="w-6 h-6" />
-              </div>
               <h3 className="text-[#0F172A] text-xl font-bold font-display">Our Vision</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 To be a reliable partner for our clients in building world-class facade elevations, recognized as the most preferred total solution glazing brand — a symbol of quality and reliability.
@@ -421,9 +409,6 @@ export default function About() {
           >
             <div className="glass-panel p-8 sm:p-10 rounded-2xl border-[#E2E8F0] relative overflow-hidden bg-gradient-to-br from-amber-50/50 to-white space-y-6">
               <div className="absolute top-0 right-0 w-40 h-40 bg-amber-100/40 blur-3xl pointer-events-none" />
-              <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-500">
-                <Shield className="w-6 h-6" />
-              </div>
               <h3 className="text-[#0F172A] text-xl font-bold font-display">Our Mission</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 To build outstanding facade elevations that transform city skylines, growing steadily and profitably by delivering high-quality products and efficient turnkey services within the shortest possible timelines.
@@ -504,8 +489,7 @@ export default function About() {
                   {partner.description}
                 </p>
               </div>
-              <div className="border-t border-[#E2E8F0] pt-3 mt-4 text-[10px] text-slate-500 flex items-center space-x-1">
-                <Globe className="w-3 h-3 shrink-0" />
+              <div className="border-t border-[#E2E8F0] pt-3 mt-4 text-[10px] text-slate-500">
                 <span className="text-slate-600">{partner.location}</span>
               </div>
             </motion.div>

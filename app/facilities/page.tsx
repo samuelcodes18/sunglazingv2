@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Hammer, Scale, ShieldCheck, Cpu, HardHat, Landmark, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Facilities() {
@@ -25,7 +24,6 @@ export default function Facilities() {
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto mb-20 space-y-6 mt-10">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold uppercase tracking-wider">
-          <Cpu className="w-3.5 h-3.5 text-[#2563EB]" />
           <span>Industrial Capacity</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0F172A] font-display tracking-tight">
@@ -40,9 +38,6 @@ export default function Facilities() {
       <section className="mb-24 grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-[#2563EB]">
-            <Scale className="w-5 h-5" />
-          </div>
           <h3 className="text-[#0F172A] text-lg font-bold font-display">Extrusion Heritage</h3>
           <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             Our historical roots in profile extrusion enable us to maintain a capacity of 3000 tons/annum, ensuring a steady supply of structural sections.
@@ -50,9 +45,6 @@ export default function Facilities() {
         </div>
 
         <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-500">
-            <Hammer className="w-5 h-5" />
-          </div>
           <h3 className="text-[#0F172A] text-lg font-bold font-display">Turnkey Pre-Assembly</h3>
           <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             Off-site modular assembly reduces site workloads by 70%. We deliver pre-glazed, weather-sealed panels directly to the build coordinates.
@@ -60,9 +52,6 @@ export default function Facilities() {
         </div>
 
         <div className="glass-panel p-6 sm:p-8 rounded-2xl border-[#E2E8F0] space-y-4">
-          <div className="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-500">
-            <ShieldCheck className="w-5 h-5" />
-          </div>
           <h3 className="text-[#0F172A] text-lg font-bold font-display">Testing & QA Rigor</h3>
           <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
             We partner with the Reynaers Institute, Belgium, to perform air infiltration, water leakage, and structural loading tests on custom facade units.
